@@ -1,0 +1,63 @@
+:root {
+    color-scheme: light dark;
+    --text-color: light-dark(#4c4f69, #cad3f5);
+    --bg-color: light-dark(#eff1f5, #24273a);
+    --link-color: light-dark(#1e66f5, #8aadf4);
+    --name-color: light-dark(#8839ef, #c6a0f6);
+    --caption-color: light-dark(#5c5f77, #b8c0e0);
+    --text-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: var(--text-font);
+    font-size: 18px;
+    line-height: 1.25em;
+    height: 100%;
+    scroll-behavior: smooth;
+  }
+
+  @media only screen and (prefers-reduced-motion: false) {
+    :root {
+      scroll-behavior: unset;
+    }
+  }
+
+  @media only print {
+    :root {
+      --text-color: black;
+      --bg-color: white;
+      --link-color: blue;
+    }
+  }
+
+  body {
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    min-height: 100%;
+    margin: 0;
+    padding: 1rem;
+  }
+
+  body > * {
+    margin-inline: auto;
+    width: min(768px, 100%);
+  }
+
+  a,
+  a:visited {
+    color: var(--link-color);
+    text-decoration: underline;
+  }
+
+  a:hover {
+    text-decoration-style: wavy;
+  }
+
+  #index-name {
+    width: fit-content;
+    height: max-content;
+    padding: 0.5rem 0;
+    margin: 1rem 0;
+  }
